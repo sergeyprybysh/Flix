@@ -14,6 +14,13 @@ class MovieDetailsViewController: UIViewController {
     @IBOutlet var titleLabel: UILabel!
     @IBOutlet var synopsisLabel: UILabel!
     
+    @IBAction func posterTap(_ sender: UITapGestureRecognizer) {
+        let viewController = TrailerViewController()
+        viewController.movieId = movie.id
+
+        present(viewController, animated: true, completion: nil)
+    }
+
     var movie: Movie!
     
     override func viewDidLoad() {
